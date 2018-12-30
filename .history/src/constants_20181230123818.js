@@ -1,0 +1,3 @@
+export default {
+    UPDATE_TEMPERATURE: 'UPDATE_TEMPERATURE'
+}
