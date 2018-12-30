@@ -1,5 +1,7 @@
 import {createStore} from 'redux'
 
+export const store = createStore(reducer)
+
 export const increase = val => ({
     type: "INCREASE",
     payload: val
@@ -20,5 +22,3 @@ export function reducer(state = defaultState, action = {}) {
             return state;
     }
 }
-
-export const store = createStore(reducer);

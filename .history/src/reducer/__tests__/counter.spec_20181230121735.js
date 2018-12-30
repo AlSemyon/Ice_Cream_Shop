@@ -25,9 +25,9 @@ describe("Counter", () => {
     it('should not call subscribe when unsubscribed', () => {
         const listener = jest.fn();
         const unsubscribed = store.subscribe(listener);
+        store.subscribe(listener);
         const action = increase(3);
-        unsubscribed();
         store.dispatch(action);
-        expect(listener).not.toHaveBeenCalled();
+        expect(listener).toHaveBeenCalled();
     })
 })

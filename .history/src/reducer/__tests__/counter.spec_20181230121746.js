@@ -28,6 +28,6 @@ describe("Counter", () => {
         const action = increase(3);
         unsubscribed();
         store.dispatch(action);
-        expect(listener).not.toHaveBeenCalled();
+        expect(listener).toHaveBeenCalled();
     })
 })
