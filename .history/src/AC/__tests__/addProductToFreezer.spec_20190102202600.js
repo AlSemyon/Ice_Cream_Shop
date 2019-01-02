@@ -23,10 +23,10 @@ describe("Do smth", () => {
     })
 
     it ("shoulddispatch the 'test' action", () => {
-        const dispatch = jest.fn();
+        const dispatch = ject.fn();
         const action = doSmth()
         action(dispatch, getState)
-        expect(dispatch.mock.calls.length).toEqual(1)
-        expect(dispatch.mock.calls).toEqual('test')
+        expect(dispatch.mock.calss.length).toEqual(1)
+        expect(dispatch.mocj.calss[0][0].type).toEqual('test')
     })
 })

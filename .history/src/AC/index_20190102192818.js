@@ -19,8 +19,7 @@ export function addProductToFreezer(name, amount) {
 export function placeOrder({customerName, createAt = Date.now(), cone = true, scoops}) {
     return {
         type: C.PLACE_ORDER,
-        payload: {customerName, createAt, cone, scoops},
-        randomId: true
+        payload: {customerName, createAt, cone, scoops}
     }
 }
 export function fullFillOrder(id) {
@@ -41,14 +40,5 @@ export function cancelOrder(id) {
     return {
         type: C.CANCEL_ORDER,
         payload: id
-    }
-}
-
-export function doSmth() {
-    return function(dispatch, getState) {
-        dispatch({
-            type: 'test',
-            payload: getState().freezer.temperature
-        })
     }
 }

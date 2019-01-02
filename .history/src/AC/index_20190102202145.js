@@ -48,7 +48,7 @@ export function doSmth() {
     return function(dispatch, getState) {
         dispatch({
             type: 'test',
-            payload: getState().freezer.temperature
+            payload.getState().freezer.temperature
         })
     }
 }

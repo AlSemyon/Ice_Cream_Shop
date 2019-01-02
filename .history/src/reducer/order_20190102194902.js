@@ -13,8 +13,6 @@ export default (state = [], action) => {
             return state.map((order) => {
                 return order.id === payload ? {...order, status: 'paid'} :  order;
             })
-        case C.CANCEL_ORDER:
-            return state.filter((order) => order.id !== payload)
         default:
             return state
     }

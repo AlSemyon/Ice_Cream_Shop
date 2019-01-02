@@ -43,12 +43,3 @@ export function cancelOrder(id) {
         payload: id
     }
 }
-
-export function doSmth() {
-    return function(dispatch, getState) {
-        dispatch({
-            type: 'test',
-            payload: getState().freezer.temperature
-        })
-    }
-}

@@ -1,6 +1,5 @@
 import C from '../../constants'
-import F from '../../flavors'
-import {addProductToFreezer, doSmth} from '../index'
+import {fullFillOrder, payForOrder, cancelOrder} from '../index'
 
 describe("Add product to freezer", () => {
     it("should containt the right action type", () => {
@@ -13,20 +12,4 @@ describe("Add product to freezer", () => {
         expect(action.payload.name).toEqual(F.CHOCOLATE);
         expect(action.payload.amount).toEqual(5);
     }) 
-})
-
-describe("Do smth", () => {
-    const getState = () => ({
-        freezer: {
-            temperature: 10
-        }
-    })
-
-    it ("shoulddispatch the 'test' action", () => {
-        const dispatch = jest.fn();
-        const action = doSmth()
-        action(dispatch, getState)
-        expect(dispatch.mock.calls.length).toEqual(1)
-        expect(dispatch.mock.calls).toEqual('test')
-    })
 })
