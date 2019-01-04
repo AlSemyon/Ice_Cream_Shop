@@ -1,6 +1,4 @@
-import axios from 'axios'
 import C from '../constants'
-
 
 export function updateTemperature(temperature) {
     return {
@@ -60,14 +58,5 @@ export function fetchEmployess() {
         dispatch({
             type: C.FETCH_EMPLOYESS_REQUEST
         })
-        return axios.get('/data/employees.json')
-             .then(({data}) => dispatch({
-                 type: C.FETCH_EMPLOYESS_SUCCESS,
-                 payload: data
-             }))
-             .catch(err => dispatch({
-                 type: C.FETCH_EMPLOYESS_FAILURE,
-                 payload: err.message
-             }))
     }
 }

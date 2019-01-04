@@ -27,6 +27,6 @@ describe("Do smth", () => {
         const action = doSmth()
         action(dispatch, getState)
         expect(dispatch.mock.calls.length).toEqual(1)
-        expect(dispatch.mock.calls[0][0].type).toEqual('test')
+        expect(dispatch.mock.calls[0].type).toEqual('test')
     })
 })

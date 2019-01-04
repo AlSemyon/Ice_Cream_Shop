@@ -60,7 +60,7 @@ export function fetchEmployess() {
         dispatch({
             type: C.FETCH_EMPLOYESS_REQUEST
         })
-        return axios.get('/data/employees.json')
+        axios.get('/data/employses.json')
              .then(({data}) => dispatch({
                  type: C.FETCH_EMPLOYESS_SUCCESS,
                  payload: data
