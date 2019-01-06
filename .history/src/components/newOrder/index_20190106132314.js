@@ -17,11 +17,6 @@ class NewOrder extends Component {
         ...DEFAULT_STATE
     }
 
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.placeOrder(this.state);
-        this.setState(DEFAULT_STATE)
-    }
     handleName = ({target}) => this.setState({
         customerName: target.value
     })
@@ -30,31 +25,6 @@ class NewOrder extends Component {
         cone: target.id === 'cone'
     })
 
-    handleDecreaseFlavor = (flavorName) => {
-        const {scoopes} = this.state;
-        if (!scoopes[flavorName]) {
-            return;
-        }
-        
-        if (scoopes[flavorName] === 1) {
-            const updatedScoops = {
-                ...scoopes
-            }
-            delete updatedScoops[flavorName]
-            
-            this.setState({
-                scoopes: updatedScoops
-            })
-        } else {
-            this.setState({
-                scoopes: {
-                    ...scoopes,
-                    [flavorName]: scoopes[flavorName] - 1
-                }
-            })
-        }
-    }
-    
     handleIncreaseFlavor = (flavorName) => {
         this.setState({
             scoopes: {
@@ -81,16 +51,14 @@ class NewOrder extends Component {
                         {
                             Object.keys(F).map(flavor => 
                             <OrderScoopes key={flavor}
-                                          handleDecreaseFlavor = {() => this.handleDecreaseFlavor(flavor)}
-                                          handleIncreaseFlavor = {() => this.handleIncreaseFlavor(flavor)}
                                           count={scoopes[flavor] || 0}
                                           flavor={flavor}/>)
                         }
                         
-                        </div>
+                </div>
                     </div>
 
-                    <button className="order-button" onClick={this.handleSubmit}>Add</button>
+                    <button className="order-button">Add</button>
                 </form>
              </div>
 		);

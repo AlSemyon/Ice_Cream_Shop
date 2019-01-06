@@ -17,11 +17,6 @@ class NewOrder extends Component {
         ...DEFAULT_STATE
     }
 
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.placeOrder(this.state);
-        this.setState(DEFAULT_STATE)
-    }
     handleName = ({target}) => this.setState({
         customerName: target.value
     })
@@ -87,10 +82,10 @@ class NewOrder extends Component {
                                           flavor={flavor}/>)
                         }
                         
-                        </div>
+                </div>
                     </div>
 
-                    <button className="order-button" onClick={this.handleSubmit}>Add</button>
+                    <button className="order-button">Add</button>
                 </form>
              </div>
 		);

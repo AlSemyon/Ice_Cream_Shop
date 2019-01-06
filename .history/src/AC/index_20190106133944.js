@@ -19,10 +19,10 @@ export function addProductToFreezer(name, amount){
     }
 }
 
-export function placeOrder({customerName, createAt = Date.now(), cone = true, scoopes}){
+export function placeOrder({customerName, createAt = Date.now(), cone = true, scoops}){
     return {
         type: C.PLACE_ORDER,
-        payload: {customerName, createAt, cone, scoopes},
+        payload: {customerName, createAt, cone, scoops},
         generateId: true
     }
 }
