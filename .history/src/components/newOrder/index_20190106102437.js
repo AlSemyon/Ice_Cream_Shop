@@ -4,7 +4,6 @@ import './newOrder.css'
 class NewOrder extends Component {
 	render(){
 		return(
-            <div>
             <form className="form">
                 <div className="row">
                     <div className="col">
@@ -52,7 +51,6 @@ class NewOrder extends Component {
                         </div>
                     </div>
                 </div>
-             </div>
              </div>
 		);
 	}

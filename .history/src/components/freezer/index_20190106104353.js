@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import Box from '../layout/Box';
 import FreezerItem from './FreezerItem'
-import AddProductToFreezer from './AddProductToFreezer'
 import { updateTemperature, addProductToFreezer } from '../../AC'
 
 
@@ -13,28 +12,18 @@ class  Freezer  extends Component {
         const randomTemperature = Math.round(Math.random() * 10);
         this.props.updateTemperature(randomTemperature);
     }
-    
-    handleRestock = (name) => {
-        const amount = parseInt(window.prompt('Enter amount of restock'), 10);
-        if (!isNaN(amount)) {
-            this.props.addProductToFreezer(name, amount)
-        }
-    }
 
     render(){
         const {flavors, temperature} = this.props;
         const items = Object.keys(flavors).map(name =>
-            <FreezerItem key={name} 
-                         name={name} 
-                         onClickRestock={() => this.handleRestock(name)}
-                         scoops={flavors[name]} />
+            <FreezerItem name={key} name={name} scoops="12" />
         )
     	return (
-    		<Box title={`Freezrt ( -${temperature || 0} C)`}>
-                <div className="box__content">
-                    {items}
-                </div>
-                <AddProductToFreezer/>
+    		<Box title="Freezer ( 0 C)">
+        <div className="box__content">
+            <FreezerItem name="Vanilla" scoops="12" />
+            <FreezerItem name="Chocolatte" scoops="33"/>
+        </div>
         </Box>
     )
     }

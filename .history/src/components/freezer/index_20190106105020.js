@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import Box from '../layout/Box';
 import FreezerItem from './FreezerItem'
-import AddProductToFreezer from './AddProductToFreezer'
 import { updateTemperature, addProductToFreezer } from '../../AC'
 
 
@@ -15,10 +14,7 @@ class  Freezer  extends Component {
     }
     
     handleRestock = (name) => {
-        const amount = parseInt(window.prompt('Enter amount of restock'), 10);
-        if (!isNaN(amount)) {
-            this.props.addProductToFreezer(name, amount)
-        }
+        const amount = parseInt(window.prompt('Enter amount of restock'), 10)
     }
 
     render(){
@@ -34,7 +30,6 @@ class  Freezer  extends Component {
                 <div className="box__content">
                     {items}
                 </div>
-                <AddProductToFreezer/>
         </Box>
     )
     }

@@ -3,10 +3,7 @@ import F from '../flavors'
 
 const defaultState = {
     temperature: null,
-    flavors: {
-        [F.CHOCOLATE]: 20,
-        [F.VANILLA]: 50
-    }
+    flavors: {}
 }
 
 export default (state = defaultState, action) => {
