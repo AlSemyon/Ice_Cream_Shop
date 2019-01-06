@@ -5,7 +5,7 @@ import './orderTicket.css'
 import Order from './Order'
 import {fullFillOrder, payForOrder, cancelOrder} from '../../AC'
 
-const OrderTicket  = ({orders, fullFillOrder, payForOrder, cancelOrder}) =>
+const OrderTicket  = (orders, fullFillOrder, payForOrder, cancelOrder) =>
     <div className="box__content box__content_orders">
         {
             orders.map(order => <Order key={order.id}

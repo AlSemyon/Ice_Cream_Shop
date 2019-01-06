@@ -20,8 +20,7 @@ class Order extends Component {
                     </select>
                 </div>
 
-                <p className="order-count">{order.cone ? 'Cone' : 'Cup'}}</p>
-
+                <p className="order-count">Cone — 4 scoops</p>
 
                 <div className="order-item">
                     <div className="order-flavor__item">

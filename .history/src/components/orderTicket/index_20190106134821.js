@@ -5,10 +5,10 @@ import './orderTicket.css'
 import Order from './Order'
 import {fullFillOrder, payForOrder, cancelOrder} from '../../AC'
 
-const OrderTicket  = ({orders, fullFillOrder, payForOrder, cancelOrder}) =>
+const OrderTicket  = (orders, fullFillOrder, payForOrder, cancelOrder) =>
     <div className="box__content box__content_orders">
         {
-            orders.map(order => <Order key={order.id}
+            order.map(order => <Order key={order.id}
                                       order={order}
                                       fullFillOrder={() => fullFillOrder(order.id)}
                                       payForOrder={() => payForOrder(order.id)}
@@ -26,4 +26,4 @@ OrderTicket.propTypes ={
 export default connect(
     ({order}) => ({orders: order}),
     {fullFillOrder, payForOrder, cancelOrder}
-)(OrderTicket);
+);

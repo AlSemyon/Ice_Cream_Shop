@@ -22,7 +22,7 @@ class Order extends Component {
 
                 <p className="order-count">{order.cone ? 'Cone' : 'Cup'}}</p>
 
-
+                {Object.keys(order)}
                 <div className="order-item">
                     <div className="order-flavor__item">
                         <span className="order-item__title">Vanilla</span>
