@@ -30,16 +30,11 @@ class AddProductToFreezer extends Component {
             return
         }
 
-        if (isNaN(amount) && amount <= 0) {
-            alert('Type amount of flavor');
+        if (amount <= 0) {
+            alert('Choose flavor');
             return
         }
-        this.props.addProductToFreezer(flavor, amount);
-
-        this.setState({
-            flavor: '',
-            amount: 1
-        })
+        this.props.addProductToFreezer(flavor, amount)
     }
     render() {
         const { flavor, amount } = this.state

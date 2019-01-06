@@ -20,26 +20,8 @@ class AddProductToFreezer extends Component {
         [target.name]: target.value
     })
 
-    addProduct = e => {
-        e.preventDefault();
-        const flavor = this.state.flavor;
-        const amount = parseInt(this.state.amount, 10)
-
-        if (!flavor) {
-            alert('Choose flavor');
-            return
-        }
-
-        if (isNaN(amount) && amount <= 0) {
-            alert('Type amount of flavor');
-            return
-        }
-        this.props.addProductToFreezer(flavor, amount);
-
-        this.setState({
-            flavor: '',
-            amount: 1
-        })
+    addProductToFreezer = () => {
+        
     }
     render() {
         const { flavor, amount } = this.state
@@ -63,7 +45,7 @@ class AddProductToFreezer extends Component {
                            onChange={this.handleChange}
                     />
 
-                    <button className="add-product-btn" onClick={this.addProduct}> Add product</button>
+                    <button className="add-product-btn" onClick={}> Add product</button>
                 </div>
             </form>
         )
