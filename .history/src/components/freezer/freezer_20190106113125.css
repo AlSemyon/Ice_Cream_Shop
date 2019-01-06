@@ -33,29 +33,9 @@
 }
 
 .add-product-form {
-    margin: 1rem 0;
-    padding: 2rem 1rem;
-    background: #e2e2e2;
+
 }
 
 .form-select { 
-    padding: 6px 0;
-    margin-right: 2rem;
-    font-size: 1.3rem;
-}
-
-.form-number {
-    padding: 6px 0;
-    max-width: 70px;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.add-product-btn {
-    background: #417378;
-    color: white;
-    margin-top: 1rem;
-    padding: .5rem;
-    cursor:pointer;
-    font-size: 1.2rem;
+    
 }

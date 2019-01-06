@@ -11,8 +11,11 @@ class AddProductToFreezer extends Component {
     }
 
     renderFlavorOption = () => {
-        return Object.keys(F).map(name =>
-            <option key={name} value={name}>{F[name]}</option>
+        const items = Object.keys(flavors).map(name =>
+            <FreezerItem key={name} 
+                         name={name} 
+                         onClickRestock={() => this.handleRestock(name)}
+                         scoops={flavors[name]} />
         )
     }
 
@@ -20,23 +23,22 @@ class AddProductToFreezer extends Component {
         const { flavor, amount } = this.state
         return (
             <form>
-                <div className="add-product-form">
+                <div>
                     <select name="flavor"
-                            className="form-select"
+                            className=""
                             value={flavor}
                     >
                         <option value="">Choose flavor</option>
-                        {this.renderFlavorOption()}
                     </select>
 
                     <input type="numer"
                            min={1}
-                           className="form-number"
+                           className=""
                            name="amount"
                            value={amount}
                     />
 
-                    <button className="add-product-btn"> Add product</button>
+                    <button className=""> Add product</button>
                 </div>
             </form>
         )

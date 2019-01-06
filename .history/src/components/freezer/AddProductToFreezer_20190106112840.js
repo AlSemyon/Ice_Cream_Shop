@@ -20,23 +20,22 @@ class AddProductToFreezer extends Component {
         const { flavor, amount } = this.state
         return (
             <form>
-                <div className="add-product-form">
+                <div>
                     <select name="flavor"
-                            className="form-select"
+                            className=""
                             value={flavor}
                     >
                         <option value="">Choose flavor</option>
-                        {this.renderFlavorOption()}
                     </select>
 
                     <input type="numer"
                            min={1}
-                           className="form-number"
+                           className=""
                            name="amount"
                            value={amount}
                     />
 
-                    <button className="add-product-btn"> Add product</button>
+                    <button className=""> Add product</button>
                 </div>
             </form>
         )

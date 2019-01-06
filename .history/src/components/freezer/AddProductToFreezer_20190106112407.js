@@ -2,7 +2,6 @@ import React, {Component}  from 'react';
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import { addProductToFreezer } from '../../AC'
-import F from '../../flavors'
 
 class AddProductToFreezer extends Component {
     state = {
@@ -10,33 +9,21 @@ class AddProductToFreezer extends Component {
         amount: 1
     }
 
-    renderFlavorOption = () => {
-        return Object.keys(F).map(name =>
-            <option key={name} value={name}>{F[name]}</option>
-        )
-    }
-
     render() {
-        const { flavor, amount } = this.state
         return (
             <form>
-                <div className="add-product-form">
+                <div>
                     <select name="flavor"
-                            className="form-select"
-                            value={flavor}
+                            className=""
                     >
                         <option value="">Choose flavor</option>
-                        {this.renderFlavorOption()}
                     </select>
 
                     <input type="numer"
                            min={1}
-                           className="form-number"
-                           name="amount"
-                           value={amount}
+                           className=""
+                           name=""
                     />
-
-                    <button className="add-product-btn"> Add product</button>
                 </div>
             </form>
         )

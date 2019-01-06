@@ -36,7 +36,7 @@ class AddProductToFreezer extends Component {
                            value={amount}
                     />
 
-                    <button className="add-product-btn"> Add product</button>
+                    <button className=""> Add product</button>
                 </div>
             </form>
         )

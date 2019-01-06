@@ -31,12 +31,12 @@ class AddProductToFreezer extends Component {
 
                     <input type="numer"
                            min={1}
-                           className="form-number"
+                           className=""
                            name="amount"
                            value={amount}
                     />
 
-                    <button className="add-product-btn"> Add product</button>
+                    <button className=""> Add product</button>
                 </div>
             </form>
         )
