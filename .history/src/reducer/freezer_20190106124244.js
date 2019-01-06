@@ -27,12 +27,12 @@ export default (state = defaultState, action) => {
                 }
             }
         case C.REMOVE_SCOOP:
-            const decreaseamount = (state.flavors[payload] || 0) - 1;
+            const amount = (state.flavors[payload] || 0) - 1;
             return {
                 ...state,
                 flavors: {
                     ...state.flavors,
-                    [payload]: Math.max(decreaseamount, 0)
+                    [payload.name]: Math.min(amount, 60)
                 }
             }
         default:

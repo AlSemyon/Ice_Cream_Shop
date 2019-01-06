@@ -22,7 +22,7 @@ class  Freezer  extends Component {
     }
 
     render(){
-        const {flavors, temperature, removeScoop} = this.props;
+        const {flavors, temperature} = this.props;
         const items = Object.keys(flavors).map(name =>
             <FreezerItem key={name} 
                          name={name} 

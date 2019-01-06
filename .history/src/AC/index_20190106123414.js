@@ -80,7 +80,7 @@ export function fetchEmployees(){
 
 export function removeScoop(flavorName) {
     return {
-        type: C.REMOVE_SCOOP,
+        type: C.removeScoop,
         payload: flavorName
     }
 }
