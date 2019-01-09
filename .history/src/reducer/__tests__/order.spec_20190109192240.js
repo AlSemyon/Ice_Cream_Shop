@@ -8,7 +8,7 @@ describe("Order reducer", () => {
             const newState = order(undefined, placeOrder({
                 customerName: 'Bill',
                 cone: false,
-                scoopes: {
+                scoops: {
                     [F.VANILLA]: 1
                 }
            }));
@@ -16,7 +16,7 @@ describe("Order reducer", () => {
             expect(newState[0].customerName).toEqual('Bill');
             expect(newState[0].cone).toEqual(false);
             expect(typeof newState[0].createAt).toEqual('number');
-            expect(newState[0].scoopes).toEqual({
+            expect(newState[0].scoops).toEqual({
                 [F.VANILLA]: 1
             });
 

@@ -8,7 +8,7 @@ describe("Order reducer", () => {
             const newState = order(undefined, placeOrder({
                 customerName: 'Bill',
                 cone: false,
-                scoopes: {
+                scoops: {
                     [F.VANILLA]: 1
                 }
            }));

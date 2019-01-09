@@ -40,6 +40,16 @@ class Order extends Component {
                            tittle={name}
                            count={order.scoopes[name]}
                            />)}
+                <div className="order-item">
+                    <div className="order-flavor__item">
+                        <span className="order-item__title">Vanilla</span>
+                        <span className="order-item__count">3</span>
+                    </div>
+                    <div className="order-flavor__item">
+                        <span className="order-item__title">Chocolatte</span>
+                        <span className="order-item__count">3</span>
+                    </div>
+                </div>
               </div>
 		);
 	}
