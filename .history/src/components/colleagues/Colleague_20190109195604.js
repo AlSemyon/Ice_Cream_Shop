@@ -16,10 +16,4 @@ const Colleague = ({image, name, status}) => {
 	);
 }
 
-Colleague.propTypes = {
-    image: PropTypes.object, 
-    name: PropTypes.object, 
-    status: PropTypes.string.isRequired
-}
-
 export default Colleague;

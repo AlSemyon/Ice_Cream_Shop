@@ -17,13 +17,12 @@ class Colleagues extends Component {
         // }
         return <div>
             {!loading && !error && <Fragment>
-                {data.map(person =>
-                    <Colleague name={person.name}
-                               image={person.picture}
-                               status="checked in"/>)}
+                <Colleague name="Pete" image="person1.png" status="checked in" />
+                <Colleague name="Ashley" image="person5.png" status="checked in" />
+                <Colleague name="Bill" image="person2.png" status="checked in" />
             </Fragment>}
             {!loading && error && <h2>Error</h2>}
-            {loading && <h2>Loading ...</h2>}
+            {!loading && <h2>Loading ...</h2>}
         </div>
     }
 }

@@ -18,8 +18,8 @@ class Colleagues extends Component {
         return <div>
             {!loading && !error && <Fragment>
                 {data.map(person =>
-                    <Colleague name={person.name}
-                               image={person.picture}
+                    <Colleague name={person.name.first}
+                               image={person.picture.thumbnail}
                                status="checked in"/>)}
             </Fragment>}
             {!loading && error && <h2>Error</h2>}

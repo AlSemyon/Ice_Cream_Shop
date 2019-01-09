@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+
 const Colleague = ({image, name, status}) => {
     const fullName = `${name.title}. ${name.first} ${name.last}`;
     const picture = image.medium;
@@ -14,12 +14,6 @@ const Colleague = ({image, name, status}) => {
             </div>
         </div>
 	);
-}
-
-Colleague.propTypes = {
-    image: PropTypes.object, 
-    name: PropTypes.object, 
-    status: PropTypes.string.isRequired
 }
 
 export default Colleague;

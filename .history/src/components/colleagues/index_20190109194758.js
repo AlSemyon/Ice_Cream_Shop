@@ -12,18 +12,20 @@ class Colleagues extends Component {
 
     render() {
         const {data, loading, error} = this.props;
-        // if (loading) {
-        //     return <h2>Loading ...</h2>
-        // }
+        if (loading) {
+            return <h2>Loading ...</h2>
+        }
+        if (error) {
+
+        }
         return <div>
-            {!loading && !error && <Fragment>
-                {data.map(person =>
-                    <Colleague name={person.name}
-                               image={person.picture}
-                               status="checked in"/>)}
+            { && !error && <Fragment>
+                <Colleague name="Pete" image="person1.png" status="checked in" />
+                <Colleague name="Ashley" image="person5.png" status="checked in" />
+                <Colleague name="Bill" image="person2.png" status="checked in" />
             </Fragment>}
-            {!loading && error && <h2>Error</h2>}
             {loading && <h2>Loading ...</h2>}
+            {!loading && error && <h2>Error</h2>}
         </div>
     }
 }
